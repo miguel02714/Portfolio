@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .cima {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+            border-bottom: 1px solid green;
+        }
+        .nome {
+            color: green;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .buttons1 {
+            display: flex;
+            gap: 15px;
+            background-color: black;
+        }
+        .sobre-mim, .projetos, .Conhecimentos, .fale-comigo {
+            color: green;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+        .logos img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        .hello-word {
+            color: green;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .meu-nome {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .back-end {
+            font-size: 23px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: gray;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+        }
+        .centro-esquerdo1 {
+            text-align: left;
+            gap: 50px;
+            margin-left: 190px;
+            margin-top: 190px;
+            max-width: 400px;
+            
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        } 
+        .wrapper {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .link_wrapper {
+            position: relative;
+        }
+
+        a {
+            display: block;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #333;
+            transition: all .35s;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: 0;
+            top: 0;
+            z-index: -1;
+            transition: all .35s;
+        }
+
+        .icon svg {
+            width: 30px;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            transform: rotate(-45deg);
+            fill: #2ecc71;
+            transition: all .35s;
+        }
+
+        a:hover {
+            width: 200px;
+            border: 3px solid #2ecc71;
+            background: transparent;
+            color: #2ecc71;
+        }
+
+        a:hover + .icon {
+            border: 3px solid #2ecc71;
+            right: -25%;
+        }
+        .foto43{
+            max-width: 400px;
+            max-height: 450px;
+            margin-left: 800px;
+            margin-top: -300px;
+            
+        }
+        .texto-sobre-mim{
+            color: green;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            width: 50vw;
+            font-size: 20px;
+            margin-left: 700px;
+            margin-top: 50px;
+            display: flex;
+            max-width: 700px;
+        }
+        .Sobre-mim1{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 100px;
+            margin-left: 900px;
+            height: -10px;
+            display: flex;
+        
+        }
+        .foto44{
+            max-width: 900px;
+            max-height: 900px;
+            margin-left: 100px;
+            margin-top: -650px;
+            display: flex;
+        
+        }
+        .html{
+            flex-direction: column;
+            max-width: 300px;
+            max-height: 100px;
+            margin-left: 300px;
+            align-items: left;
+            margin-top: 5px;
+            display: flex;
+        }
+        .html_conhcecimento{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: -70px;
+            margin-right: 120px;
+        }
+        .fotodohtml{
+            max-width: 100px;
+            margin-top: 100px;
+            margin-left: -10px;
+
+        }
+        .conhecimento2{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            max-width: 500px;
+            font-size: 40px;
+            margin-left: 500px;
+            margin-top: -100px;
+            display: flex;
+        }
+        .css{
+            max-width: 500px;
+            max-height: 100px;
+            margin-left: 400px;
+            margin-top: -210px;
+            flex-direction: column;
+            align-items: left;
+        }
+        .logocss{
+            max-width: 200px;
+            margin-top: 200px;
+            margin-left: 150px;
+        }
+        .conhecimento_css{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 170px;
+            margin-right: 120px;
+        }
+        .python{
+            max-width: 400px;
+            max-height: 100px;
+            margin-left: 900px;
+            margin-top: 110px;
+            flex-direction: column;
+            align-items: left;
+        }
+        .conhcecimentopython{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            max-width: 300px;
+        }
+        .pythonlogo {
+            max-width: 100px;
+            max-height: 100px;
+        }                   
+        .projeto1 {
+            max-width: 300px;
+            max-height: 400px;
+            margin-top: 250px;
+            border-radius: 55px;
+            margin-left: 100px;
+            display: grid;
+            position: relative;
+            border: 1px solid #000;
+        }
+
+        
+        .projeto2 {
+            max-width: 300px;
+            max-height: 400px;
+            margin-top: -400px;
+            border-radius: 55px;
+            margin-left: 470px;
+            display: grid;
+        }
+        .projeto3{
+            max-width: 300px;
+            max-height: 400px;
+            margin-top: -650px;
+            border-radius: 55px;
+            margin-left: 900px;
+            display: grid;
+        }
+        .projetos44{
+            margin-top: -400px;
+            
+        }
+
+        .projetoname{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 450px;
+            
+            margin-left: 580px;
+            font-size: 30px;
+
+        }
+
+
+</style>
+</head>
+<body>
+    <div class="cima">
+        <div class="nome">     
+            <label for="" class="nome1">Miguel Viana</label>
+        </div>
+        <div class="buttons1">
+            <label class="sobre-mim">Sobre mim</label>
+            <label class="projetos">Projetos</label>
+            <label class="Conhecimentos">Conhecimentos</label>
+            <label class="fale-comigo">Fale comigo</label>
+        </div>
+        <div class="logos">
+            <img src="https://icones.pro/wp-content/uploads/2021/06/symbole-github-vert.png" alt="GitHub">
+            <img src="green-instagram-logo-transparent-115496801724jvrm82huq-removebg-preview.png" alt="instagram">
+            <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-verte.png" alt="linkdin">
+        </div>
+    </div>
+    <div class="centro-esquerdo1">
+        <label for="" class="hello-word">Hello world &#128400</label><br>
+        <label for="" class="meu-nome">Eu sou Miguel</label><br>
+        <label for="" class="back-end">Desenvolvedor back-end</label><br>
+        <div class="wrapper">
+            <div class="link_wrapper">
+                <a href="https://wa.me/5511931025056">FALE COMIGO</a>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                        <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centro-direito">
+        <img class="foto43" src="projetoimagemexemplo.png" alt="foto">
+    </div>
+    <div class="sobre-me">
+        <label class="Sobre-mim1">SOBRE MIM</label>
+        <p class="texto-sobre-mim">Sou Miguel Viana, um jovem apaixonado por programação </br> e tecnologia. Meu foco é me tornar um programador fullstack, </br> e atualmente estou estudando Python, SQL e MySQL, </br> além de me aprofundar no desenvolvimento de servidores </br> e banco de dados. Estou criando projetos próprios, </br> como um gerenciador de senhas e um aplicativo com </br> calendário, para consolidar meus conhecimentos e ganhar </br> experiência prática. Meu objetivo é alcançar um alto </br> nível em programação até os 18 anos, trabalhando </br> em projetos desafiadores e sempre buscando aprender mais. </br> Quero construir uma carreira sólida na tecnologia, </br> alcançar minha independência financeira e abrir portas </br> para projetos cada vez maiores e mais impactantes.</p>
+        
+    </div>
+    <div class="foto-minha">
+        <img class='foto44' src="projetoimagemexemplo.png" alt="foto12">
+    </div>
+    <div class="conhecimento1">
+        <label for="" class="conhecimento2">CONHECIMENTOS</label>
+    </div>
+    <div class="html">
+        <img class="fotodohtml" src='logo_html.png' alt="logo.html">
+        <p class="html_conhcecimento">Tenho conhecimento básico em HTML e CSS, sendo capaz de estruturar páginas web simples e estilizar elementos básicos. Entendo a hierarquia das tags, a importância da semântica e sei como utilizar  classes e ids para aplicar estilos.  Ainda estou aprendendo e buscando evoluir minhas habilidades para criar interfaces mais  organizadas e funcionais.</p>
+    </div>
+    <div class="css">
+        <img class='logocss' src="css_logo-removebg-preview (1).png" alt="">
+        <p class="conhecimento_css">Tenho conhecimento básico em CSS e sei como estilizar elementos para criar páginas mais organizadas e visualmente agradáveis. Entendo conceitos como seletores, classes, ids, cores, espaçamentos e posicionamento de elementos. Ainda estou aprendendo e aprimorando minhas habilidades para desenvolver layouts mais avançados e responsivos.</p>
+    </div>
+    <div class="python">
+        <img class="pythonlogo" src="kisspng-programming-language-python-github-inc-czech-repu-5aee3f21086b96.2186135215255631690345-removebg-preview.png" alt="">
+        <p class="conhcecimentopython">Tenho um conhecimento sólido em Python e me destaco na lógica de programação e no desenvolvimento back-end. Sou capaz de criar aplicações eficientes, estruturar bancos de dados e implementar soluções robustas. Entendo bem os principais conceitos da linguagem, como manipulação de dados, estruturas de controle, funções e integração com bancos de dados. Estou sempre buscando aprimorar minhas habilidades e aprofundar meu conhecimento para me tornar um programador ainda mais completo e eficiente. </p>
+    </div>
+    
+    <p class="projetoname">PROJETOS</p>
+    <div class="projetos44">
+        <div class="projeto1">
+            <img class="projeto1" src="Design sem nome (1).png">
+            <div class="hover-text">Texto exibido ao passar o mouse</div>
+        </div>
+        <div class="projeto1">
+            <img class="projeto2" src="Design sem nome (1).png">
+        </div>
+        <div class="projeto1">
+            <img class="projeto3" src="Design sem nome (1).png">
+        </div>
+        
+
+
+</body>
+</html>
