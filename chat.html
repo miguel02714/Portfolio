@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neura Bot - Chat</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+        }
+
+        .help {
+            background-color: rgb(0, 0, 0);
+            position: fixed; /* Fixa a div no topo da tela */
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            margin-top: 650px;
+            text-align: center;
+            padding: 10px;
+            z-index: 1;
+            cursor: pointer; /* Adiciona um cursor de clique para simular um link */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            margin-top: 50px; /* Ajusta a altura para evitar sobreposição com a div help */
+        }
+    </style>
+</head>
+<body>
+    <!-- Div que ficará no topo e será clicável para redirecionar -->
+    <div class="help" onclick="redirectToPage()">Clique para Redirecionar</div>
+    
+    <!-- O iframe do chatbot -->
+    <iframe
+        src="https://www.chatbase.co/chatbot-iframe/ZGFkxnRv3ZzvXpC6Xd1qD">
+    </iframe>
+
+    <script>
+        // Função de redirecionamento
+        function redirectToPage() {
+            window.location.href = ""; // Altere para o link desejado
+        }
+    </script>
+</body>
+</html>
